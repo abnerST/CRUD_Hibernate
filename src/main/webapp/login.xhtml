@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+	<title>Login</title>
+</h:head>
+
+<h:body>
+	<center>
+		<div>
+
+			<h:form id="formularioLogin">
+
+				<p:messages id="messages" showDetail="true" closable="true">
+					<p:autoUpdate />
+				</p:messages>
+				<table
+					style="border: 1.5px solid #D3D3D3; border-radius: 10px; padding: 5px;">
+					<caption style="font-size: 25px;">Login</caption>
+					<tr>
+						<th><p:outputLabel value="Login usuário " /></th>
+						<th><p:inputText value="#{usuarioBean.usuario.usuario}" /></th>
+
+					</tr>
+					<tr>
+						<th><p:outputLabel value="Senha " /></th>
+						<th><p:password value="#{usuarioBean.usuario.senha}" /></th>
+					</tr>
+					<tr>
+						<th style="text-align: right;"><p:commandButton
+								value="Acessar" action="#{usuarioBean.acessar}"
+								update="formularioLogin" /></th>	
+					</tr>
+				</table>
+			</h:form>
+		</div>
+	</center>
+</h:body>
+
+</html>

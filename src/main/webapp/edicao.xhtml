@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+	<title>Editar jogo</title>
+</h:head>
+
+<h:body>
+	<center>
+		<div>
+
+			<h:form id="formularioEdicao">
+
+				<p:messages id="messages" showDetail="true" closable="true">
+					<p:autoUpdate />
+				</p:messages>
+				<table style="border: 1.5px solid #D3D3D3; border-radius: 10px; padding: 5px;">
+					<caption style="font-size: 25px;">Editar jogo</caption>
+					<h:inputHidden value="#{jogoBean.jogo.id}"></h:inputHidden>
+					<tr>
+						<th><p:outputLabel value="Descrição: " /></th>
+						<th><p:inputText value="#{jogoBean.jogo.descricao}" /></th>
+					</tr>
+					<tr>
+						<th><p:outputLabel value="Dt inclusao: " /></th>
+						<th><p:datePicker value="#{jogoBean.jogo.dataCriacao}" /></th>
+					</tr>
+					<tr>
+						<th><p:outputLabel value="V1: " /></th>
+						<th><p:inputText value="#{jogoBean.jogo.v1}" /></th>
+					</tr>
+					<tr>
+						<th><p:outputLabel value="V2: " /></th>
+						<th><p:inputText value="#{jogoBean.jogo.v2}" /></th>
+					</tr>
+					<tr>
+						<th><p:outputLabel value="V3: " /></th>
+						<th><p:inputText value="#{jogoBean.jogo.v3}" /></th>
+					</tr>
+					<tr>
+						<th><p:outputLabel value="V4: " /></th>
+						<th><p:inputText value="#{jogoBean.jogo.v4}" /></th>
+					</tr>
+					<tr>
+						<th><p:outputLabel value="V5: " /></th>
+						<th><p:inputText value="#{jogoBean.jogo.v5}" /></th>
+					</tr>
+					<tr>
+						<th><p:outputLabel value="V6: " /></th>
+						<th><p:inputText value="#{jogoBean.jogo.v6}" /></th>
+					</tr>
+					<tr>
+						<th><p:outputLabel value="V7: " /></th>
+						<th><p:inputText value="#{jogoBean.jogo.v7}" /></th>
+					</tr>
+					<tr>
+						<th><p:outputLabel value="V8: " /></th>
+						<th><p:inputText value="#{jogoBean.jogo.v8}" /></th>
+					</tr>
+					<tr>
+						<th><p:outputLabel value="V9: " /></th>
+						<th><p:inputText value="#{jogoBean.jogo.v9}" /></th>
+					</tr>
+					<tr>
+						<th><p:outputLabel value="V10: " /></th>
+						<th><p:inputText value="#{jogoBean.jogo.v10}" /></th>
+					</tr>
+																																																		
+																
+					<tr>
+						<th style="text-align: right;">
+							<p:commandButton value="Editar" action="#{jogoBean.editar}"	update="formularioEdicao" />
+						</th>
+						<th style="text-align: right;">
+							<p:commandButton value="Listagem de jogos" action="listagem" />
+						</th>
+						
+					</tr>
+
+				</table>
+				
+			</h:form>
+		</div>
+	</center>
+</h:body>
+
+</html>
